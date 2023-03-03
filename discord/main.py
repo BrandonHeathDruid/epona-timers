@@ -43,7 +43,7 @@ class DiscordBot(discord.Client):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
   
-        self._bosses_data_f = _path_parent + '/api/static/bosses_data.json'
+        self._bosses_data_f = _path_parent + '/api/static/bosses.json'
         logger.info(f'Loading bosses data from: {self._bosses_data_f}')
         with open(self._bosses_data_f) as f:
             self.bosses_data = json.load(f)
