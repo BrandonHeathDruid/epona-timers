@@ -1,0 +1,152 @@
+{
+    "eye": {
+        "type": "FROZEN",
+        "respawn": 30,
+        "window": 0
+    },
+    "swampie": {
+        "type": "FROZEN",
+        "respawn": 35,
+        "window": 0
+    },
+    "woody": {
+        "type": "FROZEN",
+        "respawn": 40,
+        "window": 0
+    },
+    "chained": {
+        "type": "FROZEN",
+        "respawn": 45,
+        "window": 0
+    },
+    "grom": {
+        "type": "FROZEN",
+        "respawn": 50,
+        "window": 0
+    },
+    "pyrus": {
+        "type": "FROZEN",
+        "respawn": 55,
+        "window": 0
+    },
+    "155": {
+        "type": "DL",
+        "respawn": 60,
+        "window": 0
+    },
+    "160": {
+        "type": "DL",
+        "respawn": 65,
+        "window": 0
+    },
+    "165": {
+        "type": "DL",
+        "respawn": 70,
+        "window": 0
+    },
+    "170": {
+        "type": "DL",
+        "respawn": 80,
+        "window": 0
+    },
+    "180": {
+        "type": "DL",
+        "respawn": 90,
+        "window": 0
+    },
+    "185": {
+        "type": "EDL",
+        "respawn": 75,
+        "window": 0
+    },
+    "190": {
+        "type": "EDL",
+        "respawn": 85,
+        "window": 0
+    },
+    "195": {
+        "type": "EDL",
+        "respawn": 95,
+        "window": 0
+    },
+    "200": {
+        "type": "EDL",
+        "respawn": 105,
+        "window": 0
+    },
+    "205": {
+        "type": "EDL",
+        "respawn": 115,
+        "window": 0
+    },
+    "210": {
+        "type": "EDL",
+        "respawn": 125,
+        "window": 0
+    },
+    "215": {
+        "type": "EDL",
+        "respawn": 135,
+        "window": 0
+    },
+    "aggy": {
+        "type": "MIDS",
+        "respawn": 1894,
+        "window": 1894
+    },
+    "mord": {
+        "type": "MIDS",
+        "respawn": 2160,
+        "window": 2160
+    },
+    "hrung": {
+        "type": "MIDS",
+        "respawn": 2160,
+        "window": 2160
+    },
+    "necro": {
+        "type": "MIDS",
+        "respawn": 2160,
+        "window": 2160
+    },
+    "prot": {
+        "type": "EGS",
+        "respawn": 1190,
+        "window": 0
+    },
+    "gele": {
+        "type": "EGS",
+        "respawn": 2880,
+        "window": 2880
+    },
+    "bt": {
+        "type": "EGS",
+        "respawn": 2880,
+        "window": 2880
+    },
+    "dino": {
+        "type": "EGS",
+        "respawn": 2880,
+        "window": 2880
+    },
+    "east": {
+        "type": "RINGS",
+        "respawn": 255,
+        "window": 0
+    },
+    "north": {
+        "type": "RINGS",
+        "respawn": 255,
+        "window": 0
+    },
+    "south": {
+        "type": "RINGS",
+        "respawn": 255,
+        "window": 0
+    },
+    "center": {
+        "type": "RINGS",
+        "respawn": 255,
+        "window": 0
+    }
+}

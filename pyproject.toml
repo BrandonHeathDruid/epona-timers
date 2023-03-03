@@ -11,6 +11,8 @@ Flask = "^2.2.0"
 urllib3 = "^1.26.12"
 pymongo = "^4.3.3"
 "discord.py" = "^2.2.2"
+waitress = "^2.1.2"
+certifi = "^2022.12.7"
 
 [tool.poetry.dev-dependencies]
 debugpy = "^1.6.2"
