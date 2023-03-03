@@ -13,6 +13,8 @@ pymongo = "^4.3.3"
 "discord.py" = "^2.2.2"
 waitress = "^2.1.2"
 certifi = "^2022.12.7"
+fastapi = "^0.92.0"
+uvicorn = "^0.20.0"
 
 [tool.poetry.dev-dependencies]
 debugpy = "^1.6.2"

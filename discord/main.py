@@ -1,5 +1,4 @@
 import os
-import sys
 
 _path_parent = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
