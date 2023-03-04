@@ -62,7 +62,8 @@ class DiscordBot(discord.Client):
     
   
     def set_timer(self, name, timer: datetime):
-        self.db.timer.update_one({'name': name}, {'$set': {'timer': timer.isoformat()}}, upsert=True)
+        timer = timer.isoformat() if timer is not None else None
+        self.db.timer.update_one({'name': name}, {'$set': {'timer': timer}}, upsert=True)
       
     
     async def on_ready(self):
