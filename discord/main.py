@@ -11,6 +11,8 @@ import pymongo
 import certifi
 import json
 from datetime import datetime, timedelta
+import bisect
+
 
 logging.basicConfig(format='%(levelname)s %(asctime)s - %(message)s',
                     level=logging.INFO)
@@ -45,15 +47,22 @@ class DiscordBot(discord.Client):
         self._bosses_data_f = _path_parent + '/api/static/bosses.json'
         logger.info(f'Loading bosses data from: {self._bosses_data_f}')
         with open(self._bosses_data_f) as f:
-            self.bosses_data = json.load(f)
-            self.boss_names = self.bosses_data.keys()
-            logger.info(f'Loaded {len(self.boss_names)} bosses')
+            self.bosses_data = sorted(json.load(f), key=lambda x: x['name'])
+            self.bosses_names = [b['name'] for b in self.bosses_data]
+            self.len_bosses_names = len(self.bosses_names) 
+            logger.info(f'Loaded {self.len_bosses_names} bosses')
   
         self.db = pymongo.MongoClient(os.getenv("URL_MONGODB"), tlsCAFile=certifi.where())[os.getenv('DB_NAME')]
+
+
+    def check_boss_exists(self, boss):
+        index = bisect.bisect_left(self.bosses_names, boss)
+        if index < self.len_bosses_names and self.bosses_names[index] == boss:
+            return index
+    
   
-  
-    def set_timer(self, name, timer):
-        self.db.timer.update_one({'name': name}, {'$set': {'timer': timer}}, upsert=True)
+    def set_timer(self, name, timer: datetime):
+        self.db.timer.update_one({'name': name}, {'$set': {'timer': timer.isoformat()}}, upsert=True)
       
     
     async def on_ready(self):
@@ -68,24 +77,30 @@ class DiscordBot(discord.Client):
         action = None
         cmd, *args = message.content.lower().split(' ')
         len_args = len(args)
+
+        boss_index = self.check_boss_exists(cmd)
         
-        if cmd in self.boss_names:  # can use bisect to have better performance, but the dataset is small
-            boss = cmd
-            boss_timer_minutes = self.bosses_data[boss]['respawn']
+        if boss_index is not None:
+            boss = self.bosses_data[boss_index]
+            boss_timer_minutes = boss['respawn']
             next_respawn = datetime.utcnow() + timedelta(minutes=boss_timer_minutes)
-            self.set_timer(boss, next_respawn)
+            self.set_timer(cmd, next_respawn)
             action = 'timed'
-        elif cmd == 'set' and len_args > 1 and args[0] in self.boss_names:
-            try:
-                days, hours, minutes = get_dhm(args[1:])  
-                next_respawn = datetime.utcnow() + timedelta(days=days, hours=hours, minutes=minutes)
-                self.set_timer(args[0], next_respawn)
-                action = f'set {days} {hours} {minutes}'
-            except ValueError:
-                pass 
-        elif cmd == 'reset' and len_args == 1 and args[0] in self.boss_names:
-            self.set_timer(args[0], None)
-            action = 'reset'
+        elif cmd == 'set' and len_args > 1:
+            boss_index = self.check_boss_exists(args[0])
+            if boss_index is not None:
+                try:
+                    days, hours, minutes = get_dhm(args[1:])  
+                    next_respawn = datetime.utcnow() + timedelta(days=days, hours=hours, minutes=minutes)
+                    self.set_timer(args[0], next_respawn)
+                    action = f'set {days} {hours} {minutes}'
+                except ValueError:
+                    pass 
+        elif cmd == 'reset' and len_args == 1:
+            boss_index = self.check_boss_exists(args[0])
+            if boss_index is not None:
+                self.set_timer(args[0], None)
+                action = 'reset'
 
         logger.info(f'Action: {action}')
 
