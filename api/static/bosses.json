@@ -1,182 +1,200 @@
 [
-    {
-        "name": "eye",
-        "type": "FROZEN",
-        "respawn": 30,
-        "window": 0
-    },
-    {
-        "name": "swampie",
-        "type": "FROZEN",
-        "respawn": 35,
-        "window": 0
-    },
-    {
-        "name": "woody",
-        "type": "FROZEN",
-        "respawn": 40,
-        "window": 0
-    },
-    {
-        "name": "chained",
-        "type": "FROZEN",
-        "respawn": 45,
-        "window": 0
-    },
-    {
-        "name": "grom",
-        "type": "FROZEN",
-        "respawn": 50,
-        "window": 0
-    },
-    {
-        "name": "pyrus",
-        "type": "FROZEN",
-        "respawn": 55,
-        "window": 0
-    },
-    {
-        "name": "155",
-        "type": "DL",
-        "respawn": 60,
-        "window": 0
-    },
-    {
-        "name": "160",
-        "type": "DL",
-        "respawn": 65,
-        "window": 0
-    },
-    {
-        "name": "165",
-        "type": "DL",
-        "respawn": 70,
-        "window": 0
-    },
-    {
-        "name": "170",
-        "type": "DL",
-        "respawn": 80,
-        "window": 0
-    },
-    {
-        "name": "180",
-        "type": "DL",
-        "respawn": 90,
-        "window": 0
-    },
-    {
-        "name": "185",
-        "type": "EDL",
-        "respawn": 75,
-        "window": 0
-    },
-    {
-        "name": "190",
-        "type": "EDL",
-        "respawn": 85,
-        "window": 0
-    },
-    {
-        "name": "195",
-        "type": "EDL",
-        "respawn": 95,
-        "window": 0
-    },
-    {
-        "name": "200",
-        "type": "EDL",
-        "respawn": 105,
-        "window": 0
-    },
-    {
-        "name": "205",
-        "type": "EDL",
-        "respawn": 115,
-        "window": 0
-    },
-    {
-        "name": "210",
-        "type": "EDL",
-        "respawn": 125,
-        "window": 0
-    },
-    {
-        "name": "215",
-        "type": "EDL",
-        "respawn": 135,
-        "window": 0
-    },
-    {
-        "name": "aggy",
-        "type": "MIDS",
-        "respawn": 1894,
-        "window": 1894
-    },
-    {
-        "name": "mord",
-        "type": "MIDS",
-        "respawn": 2160,
-        "window": 2160
-    },
-    {
-        "name": "hrung",
-        "type": "MIDS",
-        "respawn": 2160,
-        "window": 2160
-    },
-    {
-        "name": "necro",
-        "type": "MIDS",
-        "respawn": 2160,
-        "window": 2160
-    },
-    {
-        "name": "prot",
-        "type": "EGS",
-        "respawn": 1190,
-        "window": 0
-    },
-    {
-        "name": "gele",
-        "type": "EGS",
-        "respawn": 2880,
-        "window": 2880
-    },
-    {
-        "name": "bt",
-        "type": "EGS",
-        "respawn": 2880,
-        "window": 2880
-    },
-    {
-        "name": "dino",
-        "type": "EGS",
-        "respawn": 2880,
-        "window": 2880
-    },
-    {
-        "name": "east",
-        "type": "RINGS",
-        "respawn": 255,
-        "window": 0
-    },
-    {
-        "name": "north",
-        "type": "RINGS",
-        "respawn": 255,
-        "window": 0
-    },
-    {
-        "name": "south",
-        "type": "RINGS",
-        "respawn": 255,
-        "window": 0
-    },
-    {
-        "name": "center",
-        "type": "RINGS",
-        "respawn": 255,
-        "window": 0
-    }
+  {
+    "name": "170",
+    "type": "DL",
+    "respawn": 78,
+    "window": 3
+  },
+  {
+    "name": "mord",
+    "type": "MIDS",
+    "respawn": 1440,
+    "window": 1440
+  },
+  {
+    "name": "bt",
+    "type": "EGS",
+    "respawn": 2160,
+    "window": 2160
+  },
+  {
+    "name": "dino",
+    "type": "EGS",
+    "respawn": 2160,
+    "window": 2160
+  },
+  {
+    "name": "prot",
+    "type": "EGS",
+    "respawn": 1080,
+    "window": 120
+  },
+  {
+    "name": "hrung",
+    "type": "MIDS",
+    "respawn": 1440,
+    "window": 1440
+  },
+  {
+    "name": "aggy",
+    "type": "MIDS",
+    "respawn": 1440,
+    "window": 1440
+  },
+  {
+    "name": "necro",
+    "type": "MIDS",
+    "respawn": 1440,
+    "window": 1440
+  },
+  {
+    "name": "gele",
+    "type": "EGS",
+    "respawn": 2160,
+    "window": 2160
+  },
+  {
+    "name": "north",
+    "type": "RINGS",
+    "respawn": 215,
+    "window": 50
+  },
+  {
+    "name": "lir",
+    "type": "VORTEX",
+    "respawn": 110,
+    "window": 20
+  },
+  {
+    "name": "center",
+    "type": "RINGS",
+    "respawn": 215,
+    "window": 50
+  },
+  {
+    "name": "155",
+    "type": "DL",
+    "respawn": 63,
+    "window": 3
+  },
+  {
+    "name": "190",
+    "type": "EDL",
+    "respawn": 81,
+    "window": 3
+  },
+  {
+    "name": "195",
+    "type": "EDL",
+    "respawn": 89,
+    "window": 4
+  },
+  {
+    "name": "165",
+    "type": "DL",
+    "respawn": 73,
+    "window": 3
+  },
+  {
+    "name": "205",
+    "type": "EDL",
+    "respawn": 117,
+    "window": 4
+  },
+  {
+    "name": "grom",
+    "type": "FROZEN",
+    "respawn": 48,
+    "window": 3
+  },
+  {
+    "name": "chained",
+    "type": "FROZEN",
+    "respawn": 43,
+    "window": 3
+  },
+  {
+    "name": "eye",
+    "type": "FROZEN",
+    "respawn": 28,
+    "window": 3
+  },
+  {
+    "name": "swampie",
+    "type": "FROZEN",
+    "respawn": 33,
+    "window": 3
+  },
+  {
+    "name": "200",
+    "type": "EDL",
+    "respawn": 108,
+    "window": 5
+  },
+  {
+    "name": "woody",
+    "type": "FROZEN",
+    "respawn": 38,
+    "window": 3
+  },
+  {
+    "name": "185",
+    "type": "EDL",
+    "respawn": 72,
+    "window": 3
+  },
+  {
+    "name": "pyrus",
+    "type": "FROZEN",
+    "respawn": 58,
+    "window": 3
+  },
+  {
+    "name": "south",
+    "type": "RINGS",
+    "respawn": 215,
+    "window": 50
+  },
+  {
+    "name": "east",
+    "type": "RINGS",
+    "respawn": 215,
+    "window": 50
+  },
+  {
+    "name": "fingals",
+    "type": "VORTEX",
+    "respawn": 110,
+    "window": 20
+  },
+  {
+    "name": "carrow",
+    "type": "VORTEX",
+    "respawn": 110,
+    "window": 20
+  },
+  {
+    "name": "180",
+    "type": "DL",
+    "respawn": 88,
+    "window": 3
+  },
+  {
+    "name": "215",
+    "type": "EDL",
+    "respawn": 134,
+    "window": 5
+  },
+  {
+    "name": "210",
+    "type": "EDL",
+    "respawn": 125,
+    "window": 5
+  },
+  {
+    "name": "160",
+    "type": "DL",
+    "respawn": 68,
+    "window": 3
+  }
 ]
